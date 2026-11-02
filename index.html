@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page d'accueil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ombre" id="ombre"></div>
+
+  <header>
+    <h1>Musée d'art interactif</h1>
+    <p>Vous êtes dans une exposition de chefs-d'œuvre. Approchez-vous d'un tableau pour le découvrir, cliquez pour lire sa fiche.</p>
+  </header>
+
+  <main class="mur" id="mur"></main>
+
+  <dialog id="fiche" aria-labelledby="f-titre">
+    <div class="fiche">
+      <div class="toile" id="f-toile"></div>
+      <div>
+        <h2 id="f-titre"></h2>
+        <p class="artiste" id="f-artiste"></p>
+        <dl>
+          <dt>Date</dt><dd id="f-date"></dd>
+          <dt>Courant</dt><dd id="f-courant"></dd>
+          <dt>Conservé à</dt><dd id="f-lieu"></dd>
+        </dl>
+        <p id="f-texte"></p>
+      </div>
+    </div>
+    <button class="fermer" id="fermer">Fermer</button>
+  </dialog>
+
+  <footer>
+    <p>© 2026 – Musée d'art interactif</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
