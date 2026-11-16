@@ -1,13 +1,13 @@
 :root {
-  --mur: #e9bc78;
+  --mur: #a978d6;
   --or: #c9a24a;
-  --or-clair: #bf12d6;
-  --texte: #eceff2;
-  --discret: #bf12d6;
+  --or-clair: #000000;
+  --texte: #ffee00;
+  --discret: #020202;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-
+/* corps du texte, indique la police d'ecriture */
 body {
   background: var(--mur);
   color: var(--texte);
@@ -16,7 +16,7 @@ body {
   min-height: 100vh;
 }
 
-/* Projecteur qui suit la souris (ordinateur uniquement) */
+/* Projecteur qui suit la souris (pour les ordinateurs uniquement) */
 .ombre {
   position: fixed;
   inset: 0;
@@ -24,7 +24,7 @@ body {
   z-index: 5;
   display: none;
   background: radial-gradient(
-    circle 380px at var(--x, 50%) var(--y, 40%),
+    circle 400px at var(--x, 50%) var(--y, 40%),
     transparent 0%,
     rgba(0, 0, 0, 0.62) 100%
   );
@@ -37,6 +37,7 @@ header {
   text-align: center;
   padding: 4.5rem 1.25rem 2rem;
 }
+/*police d'écriture*/
 header h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: normal;
@@ -51,7 +52,7 @@ header p {
   color: var(--discret);
 }
 
-/* Le mur d'exposition */
+/* mur de l'exposition */
 .mur {
   max-width: 1100px;
   margin: 0 auto;
@@ -88,12 +89,13 @@ header p {
 }
 .cadre:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
 
-/* Passe-partout + tableau */
+/* sous-cadre du tableau qui accompagne le bord doré */
 .passe {
-  background: #efeae0;
-  padding: 10px;
+  background: #efe0ec;
+  padding: 6px;
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.35);
 }
+/*position de la toile*/
 .toile {
   position: relative;
   overflow: hidden;
@@ -111,7 +113,7 @@ header p {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* Information qui apparaît au survol */
+/* Titre du tableau qui apparaît au survol avec l'indication de cliquer sur la fiche pour en savoir plus */
 .infos {
   position: absolute;
   inset: 0;
@@ -130,6 +132,7 @@ header p {
   font-size: 1.15rem;
   line-height: 1.25;
 }
+/*police et couleur du texte" explicatif du bloc tableau*/
 .infos span { font-size: 0.85rem; color: var(--or-clair); }
 .infos em { font-style: normal; font-size: 0.8rem; margin-top: 0.4rem; color: #fff; }
 
@@ -138,17 +141,19 @@ header p {
   .infos { opacity: 1; }
 }
 
-/* Fiche détaillée */
+/* Fiche détaillée de l'oeuvre */
+/* fond de la case du bloc fiche*/
 dialog {
   margin: auto;
   width: min(820px, 94vw);
   max-height: 92vh;
   overflow-y: auto;
-  background: #1d2229;
+  background: #a978d6;
   color: var(--texte);
   border: 2px solid var(--or);
   padding: 0;
 }
+/*couleur de la police du titre et des indications générales*/
 dialog::backdrop { background: rgba(0, 0, 0, 0.8); }
 
 .fiche {
@@ -160,7 +165,8 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.8); }
 @media (min-width: 700px) {
   .fiche { grid-template-columns: 1fr 1fr; }
 }
-.fiche .toile { aspect-ratio: 4 / 5; border: 8px solid #efeae0; }
+/*bordure du tableau dans le bloc fiche explicative*/
+.fiche .toile { aspect-ratio: 4 / 5; border: 5px solid #92409c; }
 .fiche h2 {
   font-family: Georgia, serif;
   font-weight: normal;
@@ -176,7 +182,7 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.8); }
   margin-bottom: 1rem;
 }
 .fiche dt { color: var(--discret); }
-
+/*case qui ferme la page*/
 .fermer {
   display: block;
   margin: 0 1.5rem 1.5rem auto;
@@ -188,12 +194,12 @@ dialog::backdrop { background: rgba(0, 0, 0, 0.8); }
   cursor: pointer;
 }
 .fermer:hover { background: var(--or); color: #15181d; }
-
+/* bas de page avec ligne séparante et crédit */
 footer {
   text-align: center;
   padding: 2rem 1rem;
   color: var(--discret);
-  border-top: 1px solid #2a3038;
+  border-top: 3px solid #000000;
 }
 
 @media (prefers-reduced-motion: reduce) {
