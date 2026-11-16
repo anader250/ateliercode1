@@ -37,7 +37,7 @@ header {
   text-align: center;
   padding: 4.5rem 1.25rem 2rem;
 }
-/*police d'écriture*/
+/*police d'écriture générale*/
 header h1 {
   font-family: Georgia, "Times New Roman", serif;
   font-weight: normal;
@@ -68,7 +68,7 @@ header p {
   .paysage { grid-column: span 2; }
 }
 
-/* Cadre doré */
+/* encadrement doré des tableaux*/
 .cadre {
   position: relative;
   display: block;
@@ -89,7 +89,7 @@ header p {
 }
 .cadre:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
 
-/* sous-cadre du tableau qui accompagne le bord doré */
+/* sous-cadre du tableau qui accompagne le'encadrement doré*/
 .passe {
   background: #efe0ec;
   padding: 6px;
@@ -132,7 +132,7 @@ header p {
   font-size: 1.15rem;
   line-height: 1.25;
 }
-/*police et couleur du texte" explicatif du bloc tableau*/
+/*police et couleur du texte explicatif du bloc tableau*/
 .infos span { font-size: 0.85rem; color: var(--or-clair); }
 .infos em { font-style: normal; font-size: 0.8rem; margin-top: 0.4rem; color: #fff; }
 
